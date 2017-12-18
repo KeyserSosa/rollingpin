@@ -100,6 +100,6 @@ def select_canaries(hosts):
 
     canaries = []
     for pool, hosts in by_pool_ordered_by_pool_size:
-        canary_for_pool = sorted(hosts, key=lambda h: h.name)[0]
+        canary_for_pool = sorted(hosts, key=lambda h: h.id)[0]
         canaries.append(canary_for_pool)
     return canaries
