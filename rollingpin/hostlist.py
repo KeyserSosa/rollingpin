@@ -85,7 +85,7 @@ def select_canaries(hosts):
     * the ordering should be stable for repeatability on revert
 
     To achieve this, we take one host from each pool ordering the pools by
-    descending size and the hosts within a pool by hostname.
+    descending size and the hosts within a pool by instance ID.
 
     """
     by_pool = collections.defaultdict(list)
