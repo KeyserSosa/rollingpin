@@ -137,6 +137,8 @@ class HeadlessFrontend(object):
 
     @inlineCallbacks
     def on_enqueue(self, host, deferred):
+        # this is to trick python into thinking this is a generator so it
+        # works properly with @inlineCallbacks
         if False:
             yield
 
